@@ -108,3 +108,113 @@ const market = [
 ];
 const es10 = market.filter((e) => e.price < 10);
 console.log(es10.length);
+console.log("------------");
+
+// Crea un nuovo array con i nomi dei clienti in maiuscolo.
+
+const clients = [
+  { name: "mario", age: 40 },
+  { name: "giulia", age: 35 },
+  { name: "andrea", age: 28 },
+];
+const es11 = clients.map((e) => e.name.toUpperCase());
+console.log(es11);
+console.log("------------");
+
+// Trova solo i prodotti disponibili (available: true).
+
+const shop = [
+  { product: "Laptop", available: true },
+  { product: "Mouse", available: false },
+  { product: "Monitor", available: true },
+];
+const es12 = shop.filter((e) => e.available === true);
+console.log(es12);
+console.log("------------");
+
+// Trova il primo utente che vive a Milano.
+
+const accounts = [
+  { username: "luca23", city: "Roma" },
+  { username: "sara98", city: "Milano" },
+  { username: "teo77", city: "Torino" },
+];
+const es13 = accounts.find((e) => e.city === "Milano");
+console.log(es13);
+console.log("------------");
+
+// Stampa in console Nome - Prezzo di ogni prodotto.
+
+const gadgets = [
+  { name: "Cuffie", price: 60 },
+  { name: "Speaker", price: 120 },
+  { name: "Microfono", price: 80 },
+];
+gadgets.forEach((e) => console.log(`${e.name} - ${e.price}`));
+console.log("------------");
+
+// Stampa la frase: "Ci sono X canzoni nella playlist".
+
+const playlist = [
+  { title: "Song 1", duration: 200 },
+  { title: "Song 2", duration: 180 },
+  { title: "Song 3", duration: 240 },
+  { title: "Song 4", duration: 300 },
+];
+const es15 = playlist.length;
+console.log(`Ci sono ${es15} canzoni della playlist`);
+console.log("------------");
+
+// Conta quante persone hanno più di 30 anni.
+
+const community = [
+  { name: "Marco", age: 25 },
+  { name: "Elisa", age: 35 },
+  { name: "Paola", age: 40 },
+  { name: "Davide", age: 29 },
+];
+const es16 = community.filter((e) => e.age > 30);
+console.log(es16.length);
+console.log("------------");
+
+// Crea un array con stringhe del tipo: "Nome ha X anni".
+
+const family = [
+  { name: "Gianni", age: 50 },
+  { name: "Luca", age: 20 },
+  { name: "Francesca", age: 18 },
+];
+const es17 = family.map((e) => `${e.name} ha ${e.age} anni`);
+console.log(es17);
+console.log("------------");
+
+// Trova il primo libro con più di 400 pagine.
+
+const bookStore = [
+  { title: "Cime tempestose", pages: 300 },
+  { title: "It", pages: 1200 },
+  { title: "Il piccolo principe", pages: 100 },
+];
+const es18 = bookStore.find((e) => e.pages > 400);
+console.log(es18);
+console.log("------------");
+
+// Stampa in console "Città - Paese" per ogni destinazione.
+
+const trips = [
+  { city: "Londra", country: "Regno Unito" },
+  { city: "New York", country: "USA" },
+  { city: "Tokyo", country: "Giappone" },
+];
+trips.forEach((e) => console.log(`${e.city} - ${e.country}`));
+
+// Conta quanti studenti hanno preso 30 all’esame.
+
+const examSession = [
+  { student: "Alessio", grade: 30 },
+  { student: "Martina", grade: 28 },
+  { student: "Chiara", grade: 30 },
+  { student: "Lorenzo", grade: 25 },
+];
+const es20 = examSession.filter((e) => e.grade === 30);
+console.log(es20.length);
