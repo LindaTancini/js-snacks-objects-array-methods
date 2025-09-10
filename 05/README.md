@@ -10,8 +10,6 @@ Stampa in console il nome di ogni bevanda.
 
 Crea un array con solo i valori di zucchero (sugar).
 
-const zuccheri = drinks.map(/_ tuo codice qui _/)
-
 ### 🔹filter
 
 Trova le bevande con meno di 30 grammi di zucchero.
