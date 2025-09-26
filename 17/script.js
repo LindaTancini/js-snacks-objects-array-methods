@@ -101,11 +101,48 @@ console.log("-------------------------------");
 games.forEach((e) => console.log(`Titolo: ${e.title} - Rating : ${e.rating}`));
 console.log("-------------------------------");
 // 12. (map) Creare un array con gli anni di pubblicazione.
+const anniPubb = games.map((e) => e.year);
+console.log("Anni di pubblicazione dei giochi:", anniPubb);
+console.log("-------------------------------");
 // 13. (Accesso) Stampare il titolo del primo videogioco.
+const primo = games[0];
+console.log("Primo gioco:", primo);
+console.log("-------------------------------");
 // 14. (Accesso) Stampare il prezzo dell’ultimo videogioco.
+const ultimo = games[games.length - 1];
+console.log("Ultimo gioco:", ultimo);
+console.log("-------------------------------");
 // 15. (length) Stampare quanti videogiochi ci sono nell’array.
+console.log(`Ci sono ${games.length} giochi`);
+console.log("-------------------------------");
 // 16. (Accesso) Stampare titolo e sviluppatore del penultimo videogioco.
+const penultimo = games[games.length - 2];
+console.log("Penultimo gioco:", penultimo);
+console.log("-------------------------------");
 // 17. (Condizione) Verificare se ci sono videogiochi con rating < 90 e stampare un messaggio.
+let ratingBasso = false;
+for (let i = 0; i < games.length; i++) {
+  if (games[i].rating < 90) {
+    ratingBasso = true;
+    break;
+  }
+}
+
+if (ratingBasso) {
+  console.log("Ci sono giochi con rating minore di 90");
+} else {
+  console.log("Tutti i giochi hanno un rating maggiore di 90");
+}
+console.log("-------------------------------");
 // 18. (filter + map) Creare un array con i titoli dei videogiochi con prezzo ≥ 40.
+const titoli = games.filter((e) => e.price < 40).map((e) => e.title);
+console.log(titoli);
+console.log("-------------------------------");
 // 19. (filter + forEach) Stampare i videogiochi con rating > 90 con frase tipo "[title] ha rating [rating]".
+const fraseRating = games
+  .filter((e) => e.rating > 90)
+  .forEach((e) => console.log(`${e.title} ha rating ${e.rating}`));
+console.log("-------------------------------");
 // 20. (filter + map) Creare un array con titoli e rating dei videogiochi pubblicati dopo il 2017.
+const dopo2017 = games.filter((e) => e.year > 2017).map((e) => e.title);
+console.log(dopo2017);
