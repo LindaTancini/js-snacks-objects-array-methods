@@ -71,15 +71,34 @@ const pari = fruits.filter((e) => e.price % 2 == 0);
 console.log(pari);
 console.log("-------------------------------");
 // 16. (.find) Trovare il primo frutto che si chiama "Kiwi".
+const kiwi = fruits.find((e) => e.name === "Kiwi");
+console.log(kiwi);
 console.log("-------------------------------");
 // 17. (.find) Trovare il primo frutto con prezzo inferiore a 2.
+const prezzoInferiore = fruits.find((e) => e.price < 2);
+console.log(prezzoInferiore);
 console.log("-------------------------------");
 // 18. (.find) Trovare il primo frutto arancione.
+const arancione = fruits.find((e) => e.color === "arancione");
+console.log(arancione);
 console.log("-------------------------------");
 // 19. (.find) Trovare il primo frutto importato con prezzo maggiore di 3.
+const importatoMaggiore = fruits.find(
+  (e) => e.imported === true && e.price > 3
+);
+console.log(importatoMaggiore);
 console.log("-------------------------------");
 // 20. (.forEach) Stampare una frase per ogni frutto: "Il frutto Mela è di colore rosso e costa 2€".
+fruits.forEach((e) =>
+  console.log(`Il frutto ${e.name} è di colore ${e.color} e costa ${e.price} €`)
+);
 console.log("-------------------------------");
 // 21. (mix) Creare un array con i nomi dei frutti non importati.
+const mix1 = fruits.filter((e) => e.imported === false).map((e) => e.name);
+console.log(mix1);
 console.log("-------------------------------");
 // 22. (mix) Creare un array di stringhe per frutti importati tipo: "[name] è un frutto [color]".
+const mix2 = fruits
+  .filter((e) => e.imported === true)
+  .map((e) => `${e.name} è un frutto di colore ${e.color}`);
+console.log(mix2);
